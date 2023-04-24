@@ -1,0 +1,73 @@
+<div class="list row">
+    <h2 style="color:red;  ">Software List</h2>
+    <div class="col-md-8">
+      <div class="input-group mb-3 search">
+         <input type="text" class="form-control" placeholder="Search by software" [(ngModel)]="name">
+          
+          <div class="input-group-append">
+              <button class="btn btn-success" type = "button" (click)="searchByName()">Search</button>
+          </div>        
+      </div>
+    </div>
+    
+    <div class="dropdown">
+        <button class = "dropbtn">Fetch Software Ratings</button>
+        <div class = "dropdown-content">
+            <a class = "btn btn-outline-primary" type = "button" (click) = "fetchByRatings1()"> 1 </a>
+            <a class = "btn btn-outline-primary" type = "button" (click) = "fetchByRatings2()"> 2 </a>
+            <a class = "btn btn-outline-primary" type = "button" (click) = "fetchByRatings3()"> 3 </a>
+            <a class = "btn btn-outline-primary" type = "button" (click) = "fetchByRatings4()"> 4 </a>
+            <a class = "btn btn-outline-primary" type = "button" (click) = "fetchByRatings5()"> 5 </a>
+
+        </div>
+    </div>
+</div>
+
+<table class = "table table-info table-hover table-bordered border-primary">
+    <thead  class="table-dark">
+        <tr>
+            <th> Name </th>
+            <th> Version </th>
+            <th> Release Date </th>
+            <th> Price </th>
+            <th> Operating Systems </th>
+            <th> Installer Size </th>
+            <th> Ratings </th>
+            <th> Description </th>
+            <th> Actions </th>
+            
+        </tr>
+    </thead>       
+    <tbody>
+        <tr *ngFor = "let software of softwares" >
+            <td> {{ software.name }} </td>
+            <td> {{ software.version }} </td>
+            <td> {{ software.releaseDate }} </td>
+            <td> {{ software.price }} </td>
+            <td> {{ software.operatingSystems }} </td>
+            <td> {{ software.installerSize }} </td>
+            <td> {{ software.ratings }} </td>
+            <td> {{ software.description }} </td>
+
+            <td>
+                <div class = "btn-group-vertical" role = "group" aria-label = "Vertical button group">
+                    <button (click) = "confirmUpdate(software)" class = "btn btn-primary"> Update </button>
+                    <button (click)  = "confirmDelete(software)" class = "btn btn-danger" > Delete </button>
+                    <button (click) = "confirmsoftwareDetails(software)" class = "btn btn-secondary"> View </button>
+                </div>
+            </td>
+        </tr>
+        
+        <tr scope = "row" *ngIf="softwares.length === 0">
+            <td colspan = "9" class = "text-center"> No record found</td>
+
+        </tr>
+
+        <div class = "btn btn-danger"  *ngIf="softwares.length !== 0">
+            <button class = "m-3 btn btn-sm btn-warning" (click)="confirmremoveAllSoftwares()">Remove All</button>
+        
+        </div>
+    </tbody>
+</table>
+
+

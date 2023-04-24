@@ -1,0 +1,66 @@
+.bg-img {
+    
+  background-image: url("https://static.vecteezy.com/system/resources/previews/000/523/191/original/mobile-app-interface-development-cross-platform-concept-software-program-web-page-design-and-database-processing-vector.jpg");
+  min-height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+
+.bg-img h1{
+    padding: 7px;
+}
+
+.fcc-btn {
+    
+  background-color:fuchsia;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  text-align: center;
+  width: 20%;
+  float: right;
+  
+}
+  
+.fcc-btn:hover{
+      translate: -20px;
+      color: #07723c;
+      background-color: white;
+      transition: 0.75sec;
+}
+
+.card-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 50px;
+}
+
+.card-img-top{
+  max-width: 70%;
+  height: 70%;
+}
+.col-sm-4{
+  display: block;
+}
+
+i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 77px;
+  border: #41c365 solid 4px;
+}
+
+i:hover{
+  background: #000;
+  transition: ease-in all 0.5s;
+}
+
+  

@@ -1,0 +1,28 @@
+ label{
+    font-size: large;
+ } 
+
+input[type=text], input[type=password] {   
+     width: 100%;   
+     margin: 8px 0;  
+     padding: 12px 20px;  
+     display: inline-block;   
+     border: 3px solid chocolate;   
+     box-sizing: border-box;  
+    
+    }  
+    
+button:hover {   
+     opacity: 0.7;
+          
+}
+
+.container {  
+    width:50%;
+    padding-top: 5px;
+    padding-right: 55px;
+    padding-left: 55px; 
+     padding-bottom: 65px;  
+     background-color:beige;
+    border-radius: 20px;
+}

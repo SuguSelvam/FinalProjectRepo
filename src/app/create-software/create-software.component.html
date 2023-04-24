@@ -1,0 +1,58 @@
+<div class ="col-md-6 offset-md-3 bg-info ">
+    <h3 style="color:chartreuse;  margin-top: 40px; padding-top: 20px;">Create Software </h3> 
+    <form (ngSubmit) = "onSubmit()">
+       <hr>
+        <div class="form-group">
+            <label> Name </label>
+            <input type="text" class ="form-control" id = "name"
+                [(ngModel)] = "software.name" name = "name">
+        </div>
+    
+        <div class="form-group">
+            <label> Version </label>
+            <input type="text" class ="form-control" id = "version"
+                [(ngModel)] = "software.version" name = "version">
+        </div>
+    
+        <div class="form-group">
+            <label> Release Date </label>
+            <input type="text" class ="form-control" id = "releaseDate"
+                [(ngModel)] = "software.releaseDate" name = "releaseDate">
+        </div>
+
+        <div class="form-group">
+            <label> Price </label>
+            <input type="text" class ="form-control" id = "price"
+                [(ngModel)] = "software.price" name = "price">
+        </div>
+
+        <div class="form-group">
+            <label> Operating Systems </label>
+            <input type="text" class ="form-control" id = "operatingSystems"
+                [(ngModel)] = "software.operatingSystems" name = "operatingSystems">
+        </div>
+
+        <div class="form-group">
+            <label> Installer Size </label>
+            <input type="text" class ="form-control" id = "installerSize"
+                [(ngModel)] = "software.installerSize" name = "installerSize">
+        </div>
+
+        <div class="form-group">
+            <label> Ratings </label>
+            <input type="text" class ="form-control" id = "ratings"
+                [(ngModel)] = "software.ratings" name = "ratings">
+        </div>
+
+        <div class="form-group">
+            <label> Description </label>
+            <input type="text" class ="form-control" id = "description"
+                [(ngModel)] = "software.description" name = "description">
+        </div>
+            <button (click)="confirmonSubmit()"class = "btn btn-success btn-lg"type ="submit" >Submit</button><br/><br/>
+    </form>
+</div> 
+
+
+
+

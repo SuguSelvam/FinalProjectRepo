@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-sm bg-warning navbar-dark">
+    <ul class="nav nav-tabs">
+        
+      <li class="nav-item">
+          <a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login"  class="nav-link fa fa-sign-in" href="home-page "> Login</a>
+      </li> 
+
+      <li class="nav-item">
+          <a *ngIf="loginService.isUserLoggedIn()" routerLink="/home-page"  class="nav-link fa fa-home"> Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/contactus"  class="nav-link fa fa-phone" href = "home-page"> Contact Us</a>
+    </li>
+     
+      <li class="nav-item">
+          <a *ngIf="loginService.isUserLoggedIn()" routerLink="/softwares" class="nav-link fa fa-bars" href="softwares">  Software List</a>
+      </li>
+
+      <li class = "nav-item">
+          <a *ngIf="loginService.isUserLoggedIn()" routerLink="/create-software"  class="nav-link fa fa-plus"> Add Software</a>
+      </li>
+      
+      <li class = "nav-item">
+          <a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout"  (click)= "confirmngOnInit()" class="nav-link fa fa-sign-out">LogOut</a>
+      </li>
+
+    </ul>
+</nav>
+
+
+<div class="header" >
+    <h1 id ="title" class="text-center" style="padding:7px"> {{title}} </h1>
+  
+  <div class = "container">
+     <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+

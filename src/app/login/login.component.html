@@ -1,0 +1,24 @@
+<div class = "container">
+   <div class = "text-center">
+       <h1 style = "color:darkblue">Login</h1>   
+   </div>
+    <form>  
+      <div class="mb-3">  
+        <label>Username : </label>   
+         <input type="text" placeholder=" Enter Username " name="username" [(ngModel)]="username" required> 
+          <p id = "errormsg"> {{errorname}}</p>
+         <label>Password : </label>   
+          <input type="password" placeholder=" Enter Password " name="password" [(ngModel)]="password" required> 
+           <div id = "errormsg">{{errorpassword}}</div>
+      </div><br/>
+
+     <a href= "/home-page"  (click)="checkLogin()" class="btn btn-success"> Login </a>
+     <p class="para">
+         Not have an account? <a href="/signup">Sign Up Here</a>
+     </p>  
+          
+    </form>     
+  </div>
+
+
+
